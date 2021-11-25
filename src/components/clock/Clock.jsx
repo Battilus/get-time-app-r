@@ -24,6 +24,16 @@ const Clock = (props) => {
 
     return (
         <div className={style.wrapper}>
+            <div className={style.timeWrapp}>
+                <button className={style.deleteBtn}
+                        onClick={() => dispatch(deleteClock({timezoneId: id}))}
+                >
+                    <svg aria-hidden="true" version="1.1" width="10" height="10">
+                        <path
+                            d="M 0,0 0,0.7 4.3,5 0,9.3 0,10 0.7,10 5,5.7 9.3,10 10,10 10,9.3 5.7,5 10,0.7 10,0 9.3,0 5,4.3 0.7,0 Z"/>
+                    </svg>
+                </button>
+            </div>
             <div className={style.clock}>
                 <div className={style.clockWrapp}>
                     <div className={style.timezone}>
@@ -33,14 +43,10 @@ const Clock = (props) => {
                     <span className={style.minutes} style={{transform: `rotate(${minuteDegree}deg)`}}/>
                     <span className={style.seconds} style={{transform: `rotate(${secondDegree}deg)`}}/>
                     <span className={style.dots}/>
+                    <div className={style.timeBoard}>
+                        {timeDash}
+                    </div>
                 </div>
-            </div>
-            <div className={style.timeWrapp}>
-                <div className={style.timeBoard}>
-                    {timeDash}
-                </div>
-                <button className={style.deleteBtn}
-                        onClick={() => dispatch(deleteClock({timezoneId: id}))}>x</button>
             </div>
         </div>
     );

@@ -15,7 +15,12 @@ const ClockDashboard = () => {
     })
 
     const clocksComponents = clocks?
-        clocks.map(item => <Clock key={item.id} id={item.id} time={time} timezone={item} />) : null
+        clocks.map(item => <Clock
+            key={item.id}
+            id={item.id}
+            time={time}
+            timezone={item}
+        />) : null
 
     return (
         <div className={style.wrapper}>

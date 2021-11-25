@@ -54,9 +54,9 @@ export const timezoneList = {
         description: "Cairo",
         value: 2
     },
-    Johannesburg: {
+    JHB: {
         id: 12,
-        description: "Johannesburg",
+        description: "JHB",
         value: 2
     },
     Istanbul: {

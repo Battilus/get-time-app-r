@@ -4,6 +4,46 @@
   flex-direction: column;
   margin: 25px;
 
+  .timeWrapp {
+    align-self: flex-end;
+    margin-bottom: -25px;
+
+    .deleteBtn {
+      background-color: white;
+      width: 28px;
+      height: 28px;
+      border-radius: 100px;
+      border: none;
+      font-weight: bold;
+      transition: 0.2s;
+
+      box-shadow: inset 2px 3px 8px 0 rgba(0, 0, 0, 0.1);
+
+      svg {
+        fill: black;
+      }
+
+      &:hover {
+        background-color: red;
+        transition: 0.2s;
+
+        svg {
+          fill: white;
+        }
+      }
+
+      &:active {
+        background-color: black;
+        color: white;
+        transition: 0.2s;
+
+        svg {
+          fill: white;
+        }
+      }
+    }
+  }
+
   .clock {
     width: 250px;
     height: 250px;
@@ -89,51 +129,23 @@
         height: 12px;
         border-radius: 100px;
         background: white;
-        border: 2px solid #1b1b1b;
+        border: 2px solid #4C4C4D;
         margin: auto;
         z-index: 1;
       }
-    }
-  }
 
-  .timeWrapp {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-left: 40px;
+      .timeBoard {
+        position: absolute;
+        margin-left: 15px;
+        bottom: 45%;
 
-    .timeBoard {
-      padding: 4px;
-      color: #1b1b1b;
-      background-color: white;
-      box-shadow: inset 2px 3px 8px 0 rgba(0, 0, 0, 0.1);
-      max-width: 150px;
-      font-weight: bold;
-      border-radius: 2px;
-    }
-
-    .deleteBtn {
-      margin-left: 10px;
-      background-color: white;
-      width: 28px;
-      height: 28px;
-      border-radius: 2px;
-      border: none;
-      font-weight: bold;
-      transition: 0.2s;
-
-      box-shadow: inset 2px 3px 8px 0 rgba(0, 0, 0, 0.1);
-
-      &:hover {
-        background-color: red;
-        color: white;
-        transition: 0.2s;
-      }
-
-      &:active {
-        background-color: black;
-        color: white;
-        transition: 0.2s;
+        padding: 4px;
+        color: #4C4C4D;
+        background-color: white;
+        box-shadow: inset 2px 3px 8px 0 rgba(0, 0, 0, 0.1);
+        max-width: 90px;
+        font-weight: bold;
+        border-radius: 6px;
       }
     }
   }
