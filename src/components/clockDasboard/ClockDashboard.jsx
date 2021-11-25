@@ -1,23 +1,25 @@
 import React, {useEffect, useState} from 'react';
 import style from './clockDasboard.module.scss'
 import Clock from "../clock/Clock";
-import {timezoneList} from "../../features/timezone";
+import {useSelector} from "react-redux";
 
 
 const ClockDashboard = () => {
 
     const [time, setTime] = useState(new Date());
 
+    const clocks = useSelector(state => state.clocks.timezones)
+
     useEffect(() => {
         setTimeout(() => setTime(new Date()), 1000)
     })
 
+    const clocksComponents = clocks?
+        clocks.map(item => <Clock key={item.id} id={item.id} time={time} timezone={item} />) : null
+
     return (
         <div className={style.wrapper}>
-            <Clock time={time} timezone={timezoneList.UTC} />
-            <Clock time={time} timezone={timezoneList.Moscow} />
-            <Clock time={time} timezone={timezoneList.Tokyo} />
-            <Clock time={time} timezone={timezoneList.Toronto} />
+            {clocksComponents}
         </div>
     );
 };

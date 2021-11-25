@@ -1,11 +1,20 @@
 .wrapper {
-  height: 70px;
-  width: 100%;
-  background-color: black;
-  color: white;
   display: flex;
   align-items: center;
+  justify-content: space-between;
+
+  height: 70px;
+  background-color: black;
+  color: white;
 
   padding-left: 20px;
   padding-right: 20px;
+
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.4);
+
+  .selector {
+    width: 150px;
+    height: 25px;
+    border: none;
+  }
 }

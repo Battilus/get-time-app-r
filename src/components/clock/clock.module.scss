@@ -11,7 +11,6 @@
 
     border-radius: 100%;
     background: #ffffff;
-    //font-family: "Montserrat";
     border: 5px solid white;
     box-shadow: inset 2px 3px 8px 0 rgba(0, 0, 0, 0.1);
 
@@ -21,6 +20,16 @@
       width: 250px;
       height: 250px;
       border-radius: 100%;
+
+      .timezone {
+        padding-left: 25%;
+        padding-right: 25%;
+
+        h2 {
+          color: #1b1b1b;
+          text-align: center;
+        }
+      }
 
       .hours {
         position: absolute;
@@ -87,19 +96,45 @@
     }
   }
 
-  .timezone {
+  .timeWrapp {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 40px;
 
-    .h2 {
+    .timeBoard {
+      padding: 4px;
       color: #1b1b1b;
+      background-color: white;
+      box-shadow: inset 2px 3px 8px 0 rgba(0, 0, 0, 0.1);
+      max-width: 150px;
+      font-weight: bold;
+      border-radius: 2px;
     }
-  }
 
-  .timeBoard {
-    padding: 4px;
-    color: #1b1b1b;
-    background-color: white;
-    box-shadow: inset 2px 3px 8px 0 rgba(0, 0, 0, 0.1);
-    max-width: 150px;
-    font-weight: bold;
+    .deleteBtn {
+      margin-left: 10px;
+      background-color: white;
+      width: 28px;
+      height: 28px;
+      border-radius: 2px;
+      border: none;
+      font-weight: bold;
+      transition: 0.2s;
+
+      box-shadow: inset 2px 3px 8px 0 rgba(0, 0, 0, 0.1);
+
+      &:hover {
+        background-color: red;
+        color: white;
+        transition: 0.2s;
+      }
+
+      &:active {
+        background-color: black;
+        color: white;
+        transition: 0.2s;
+      }
+    }
   }
 }
