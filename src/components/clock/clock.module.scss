@@ -17,7 +17,8 @@
       font-weight: bold;
       transition: 0.2s;
 
-      box-shadow: inset 2px 3px 8px 0 rgba(0, 0, 0, 0.1);
+      //box-shadow: inset 2px 3px 8px 0 rgba(0, 0, 0, 0.1);
+      box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
 
       svg {
         fill: black;
@@ -66,7 +67,7 @@
         padding-right: 25%;
 
         h2 {
-          color: #1b1b1b;
+          color: #4A4A4A;
           text-align: center;
         }
       }
@@ -83,7 +84,7 @@
         background: black;
         transform-origin: bottom center;
         transform: rotate(0deg);
-        box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.4);
+        box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.8);
         z-index: 1;
       }
 
@@ -98,7 +99,7 @@
         right: 0;
         background: black;
         transform-origin: bottom center;
-        box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.4);
+        box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.8);
         transform: rotate(90deg);
         z-index: 1;
       }
@@ -114,6 +115,7 @@
         right: 0;
         border-radius: 4px;
         background: #FF4B3E;
+        box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.4);
         transform-origin: bottom center;
         transform: rotate(180deg);
         z-index: 1;
@@ -129,22 +131,22 @@
         height: 12px;
         border-radius: 100px;
         background: white;
-        border: 2px solid #4C4C4D;
+        border: 2px solid #1b1b1b;
         margin: auto;
         z-index: 1;
       }
 
       .timeBoard {
         position: absolute;
-        margin-left: 15px;
+        margin-left: 20px;
         bottom: 45%;
 
-        padding: 4px;
-        color: #4C4C4D;
+        padding: 2px 8px;
+        color: #1E2123;
         background-color: white;
         box-shadow: inset 2px 3px 8px 0 rgba(0, 0, 0, 0.1);
-        max-width: 90px;
-        font-weight: bold;
+        font-weight: 600;
+        font-size: 14px;
         border-radius: 6px;
       }
     }
