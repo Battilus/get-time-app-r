@@ -8,6 +8,18 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
+  &::-webkit-scrollbar {
+    width: 7px;
+    background-color: white;
+    border-radius: 2px;
+    box-shadow: inset 2px 3px 8px 0 rgba(0, 0, 0, 0.1);
+
+  }
+  &::-webkit-scrollbar-thumb {
+    background-color: #4A4A4A;
+    width: 6px;
+  }
 }
 
 code {

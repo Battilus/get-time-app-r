@@ -11,7 +11,8 @@ const Header = () => {
     const clocks = useSelector(state => state.clocks.timezones)
 
     const addNewClock = event => {
-        if (!clocks.find(el => el.id === timezoneList[event.target.value].id))
+        if ((event.target.value !== "default") &&
+            (!clocks.find(el => el.id === timezoneList[event.target.value].id)))
             dispatch(addClock({selectedTZ: timezoneList[event.target.value]}))
     }
 
@@ -22,11 +23,12 @@ const Header = () => {
                     className={style.selector}
                     onChange={addNewClock}
                 >
-                    <option>Choose timezone...</option>
+                    <option value="default">Choose timezone...</option>
                     {Object.keys(timezoneList).map(el =>
                         <option
                             key={timezoneList[el].id}
                             value={el}
+                            disabled={!!clocks.find(item => item.id === timezoneList[el].id)}
                         >
                             {timezoneList[el].description}
                         </option>)}

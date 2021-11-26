@@ -3,6 +3,11 @@
   align-items: center;
   justify-content: space-between;
 
+  position: -webkit-sticky;
+  position: sticky !important;
+  top: 0;
+  z-index: 10;
+
   height: 70px;
   background-color: black;
   color: white;
@@ -13,8 +18,27 @@
   box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.4);
 
   .selector {
-    width: 150px;
-    height: 25px;
+    width: 170px;
+    height: 30px;
     border: none;
+
+    &::-webkit-scrollbar {
+      width: 5px;
+      background-color: white;
+      border-radius: 2px;
+      box-shadow: inset 2px 3px 8px 0 rgba(0, 0, 0, 0.1);
+
+    }
+    &::-webkit-scrollbar-thumb {
+      background-color: black;
+      width: 4px;
+    }
+
+    color: #1E2123;
+    font-weight: 600;
+
+    option {
+      font-weight: 600;
+    }
   }
 }

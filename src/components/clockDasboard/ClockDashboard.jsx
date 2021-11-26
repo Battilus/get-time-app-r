@@ -14,7 +14,7 @@ const ClockDashboard = () => {
         setTimeout(() => setTime(new Date()), 1000)
     })
 
-    const clocksComponents = clocks?
+    const clocksComponents = clocks ?
         clocks.map(item => <Clock
             key={item.id}
             id={item.id}
